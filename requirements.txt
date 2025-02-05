@@ -3,5 +3,6 @@ pandas
 numpy
 pymongo
 certifi
+pymongo[srv]==3.6
 
 ##-e . ## This will triggered the setup.py file (Do at last when project completion is done.
