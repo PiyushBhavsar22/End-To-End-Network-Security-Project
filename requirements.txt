@@ -5,5 +5,7 @@ pymongo
 certifi
 scikit-learn
 pymongo[srv]==3.6
+dill
+pyaml
 
 ##-e . ## This will triggered the setup.py file (Do at last when project completion is done.
