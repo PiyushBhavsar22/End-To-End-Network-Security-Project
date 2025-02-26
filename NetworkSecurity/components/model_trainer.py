@@ -67,9 +67,6 @@ class ModelTrainer:
             }
             
         }
-        model_report:dict=evaluate_models(X_train=X_train,y_train=y_train,X_test=x_test,y_test=y_test,
-                                          models=models,param=params)
-
         
     def initiate_model_trainer(self)->ModelTrainerArtifact:
         try:
