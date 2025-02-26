@@ -11,7 +11,7 @@ from NetworkSecurity.entity.config_entity import ModelTrainerConfig
 
 from NetworkSecurity.utils.ml_utils.model.estimator import NetworkModel
 from NetworkSecurity.utils.main_utils.utils import save_object,load_object
-from NetworkSecurity.utils.main_utils.utils import load_numpy_array_data
+from NetworkSecurity.utils.main_utils.utils import load_numpy_array_data,evaluate_models
 from NetworkSecurity.utils.ml_utils.metric.classification_metric import get_classification_score
 
 from sklearn.linear_model import LogisticRegression
@@ -67,6 +67,8 @@ class ModelTrainer:
             }
             
         }
+        model_report:dict=evaluate_models(X_train=X_train,y_train=y_train,X_test=x_test,y_test=y_test,
+                                          models=models,param=params)
 
         
     def initiate_model_trainer(self)->ModelTrainerArtifact:
